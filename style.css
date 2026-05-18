@@ -1,0 +1,33 @@
+/* Custom CSS overrides and resets */
+body {
+    /* Hide scrollbar for cleaner look but keep functionality */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+/* Base transitions */
+::selection {
+    background-color: #D4AF37;
+    color: #121212;
+}
+
+/* Image reveal container setup for GSAP */
+.reveal-img-container {
+    visibility: hidden;
+}
+
+/* Smooth input fields for contact */
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+    top: -1rem;
+    font-size: 0.75rem;
+}
+
+/* Menu item hover effects */
+.menu-section {
+    position: relative;
+}
