@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="bg-black">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     
@@ -19,131 +19,179 @@
                 extend: {
                     colors: {
                         gold: '#D4AF37',
-                        dark: '#121212',
-                        light: '#F8F5F0',
-                        cream: '#E8DCC4'
+                        dark: '#0a0a0a',
+                        light: '#ffffff'
                     },
                     fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-light text-dark font-sans antialiased selection:bg-gold selection:text-dark">
-    <!-- Navigation (Dark Version for Light Bg) -->
-    <nav class="fixed w-full z-50 transition-all duration-300 py-4 bg-light/90 backdrop-blur-sm border-b border-gray-200" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest text-dark nav-logo">CAFE BY TAMIR</a>
-            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
-                <a href="index.html" class="text-dark hover:text-gold transition-colors duration-300">Home</a>
-                <a href="menu.html" class="text-gold transition-colors duration-300">Menu</a>
-                <a href="about.html" class="text-dark hover:text-gold transition-colors duration-300">About</a>
-                <a href="contact.html" class="text-dark hover:text-gold transition-colors duration-300">Contact</a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-dark focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
+<body class="bg-dark text-light font-sans antialiased selection:bg-gold selection:text-dark overflow-x-hidden">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+
+    <!-- Preloader -->
+    <div class="preloader fixed inset-0 z-[100] bg-dark flex flex-col justify-center items-center">
+        <div class="overflow-hidden mb-4">
+            <h1 class="text-4xl md:text-6xl font-serif text-gold tracking-widest uppercase translate-y-full preloader-text">CAFE BY TAMIR</h1>
         </div>
+        <div class="w-64 h-[1px] bg-gray-800 relative overflow-hidden">
+            <div class="absolute top-0 left-0 h-full bg-gold w-0 preloader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 mix-blend-difference py-8 px-8 md:px-16 flex justify-between items-center opacity-0 nav-anim pointer-events-none">
+        <a href="index.html" class="text-2xl font-serif font-bold tracking-widest text-light nav-logo pointer-events-auto">CB<span class="text-gold">T</span></a>
+        <div class="hidden md:flex space-x-12 text-[0.65rem] uppercase tracking-[0.3em] font-bold">
+            <a href="index.html" class="text-light hover:text-gold transition-colors duration-300 pointer-events-auto relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300">Home</a>
+            <a href="menu.html" class="text-light hover:text-gold transition-colors duration-300 pointer-events-auto relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300">Menu</a>
+            <a href="about.html" class="text-light hover:text-gold transition-colors duration-300 pointer-events-auto relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300">About</a>
+            <a href="contact.html" class="text-light hover:text-gold transition-colors duration-300 pointer-events-auto relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300">Contact</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-light focus:outline-none pointer-events-auto">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
     </nav>
 
     <!-- Main Content -->
-    <main class="pt-24 pb-24" id="main-content">
-        <!-- Banner -->
-        <section class="relative py-32 px-6 text-center border-b border-gray-200 overflow-hidden">
-            <div class="absolute inset-0 bg-black/60 z-10"></div>
-            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover hero-vid scale-110">
-                <source src="https://upload.wikimedia.org/wikipedia/commons/5/5f/A_cup_of_Kenyan_Coffee.webm" type="video/webm">
-            </video>
-            <div class="relative z-20">
-            <h1 class="text-5xl md:text-7xl font-serif mb-4 hero-title opacity-0 text-light">Our Curated <span class="italic text-gold">Menu</span></h1>
-            <p class="text-gray-300 tracking-wide font-light max-w-2xl mx-auto hero-subtitle opacity-0">An exploration of flavors, crafted with the finest ingredients from around the globe.</p>
-        </div>
-        </section>
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- Hero Section -->
+            <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+                <div class="absolute inset-0 bg-black/50 z-10"></div>
+                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover hero-vid scale-110">
+                    <source src="https://upload.wikimedia.org/wikipedia/commons/5/5f/A_cup_of_Kenyan_Coffee.webm" type="video/webm">
+                </video>
 
-        <!-- Menu Sections -->
-        <section class="max-w-4xl mx-auto px-6 mt-16 space-y-24">
+                <div class="relative z-20 text-center px-4 mt-20 w-full">
+
+                <h1 class="text-[8vw] md:text-[6vw] font-serif mb-2 leading-[0.9] tracking-tighter uppercase font-bold text-light title-anim"><span class="block overflow-hidden"><span class="block translate-y-[110%]">Curated</span></span><span class="block overflow-hidden"><span class="block translate-y-[110%] text-gold">Offerings</span></span></h1>
+
+                </div>
+
+                <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-light opacity-0 fade-anim flex flex-col items-center">
+                    <span class="text-[0.55rem] uppercase tracking-[0.3em] mb-4">Scroll</span>
+                    <div class="w-[1px] h-12 bg-gray-600 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gold -translate-y-full animate-[scrolldown_2s_infinite_ease-in-out]"></div>
+                    </div>
+                </div>
+            </section>
+
             
-            <!-- Category 1 -->
-            <div class="menu-section">
-                <h2 class="text-3xl font-serif text-center mb-10 text-gold uppercase tracking-widest reveal-fade">Artisanal Coffee</h2>
-                <div class="space-y-8">
-                    <div class="flex flex-col md:flex-row justify-between items-baseline group reveal-stagger">
-                        <div class="flex-1">
-                            <h3 class="text-xl font-serif mb-1 group-hover:text-gold transition-colors">The Golden Espresso</h3>
-                            <p class="text-gray-500 font-light text-sm italic">24k edible gold flakes, single-origin Ethiopian beans.</p>
-                        </div>
-                        <div class="hidden md:block flex-grow border-b border-dotted border-gray-400 mx-4 opacity-30"></div>
-                        <span class="text-xl font-serif mt-2 md:mt-0">$25</span>
+        <section class="py-32 bg-dark text-light relative z-20">
+            <div class="max-w-[70vw] mx-auto px-6">
+                <!-- Category 1 -->
+                <div class="mb-32">
+                    <div class="border-b border-gold/30 pb-6 mb-16 fade-in-scroll">
+                        <h2 class="text-4xl md:text-5xl font-serif text-light uppercase tracking-tighter">Artisanal <span class="italic text-gold font-light lowercase">Coffee</span></h2>
                     </div>
-                    <div class="flex flex-col md:flex-row justify-between items-baseline group reveal-stagger">
-                        <div class="flex-1">
-                            <h3 class="text-xl font-serif mb-1 group-hover:text-gold transition-colors">Kopi Luwak Pour Over</h3>
-                            <p class="text-gray-500 font-light text-sm italic">Rare Indonesian beans, meticulously brewed table-side.</p>
+                    <div class="space-y-16">
+                        <div class="group fade-in-up flex flex-col md:flex-row justify-between items-end relative overflow-hidden pb-8">
+                            <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gray-800 group-hover:bg-gold transition-colors duration-700"></div>
+                            <div class="absolute bottom-0 left-0 w-0 h-[1px] bg-gold group-hover:w-full transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]"></div>
+
+                            <div class="w-full md:w-3/4">
+                                <h3 class="text-3xl font-serif mb-4 text-light group-hover:text-gold transition-colors duration-500">Aurum Espresso</h3>
+                                <p class="text-gray-400 font-light text-sm tracking-wide max-w-md">24k edible gold flakes, single-origin Ethiopian beans.</p>
+                            </div>
+                            <div class="w-full md:w-1/4 text-right mt-4 md:mt-0">
+                                <span class="text-2xl font-sans tracking-widest text-light group-hover:text-gold transition-colors duration-500">$25</span>
+                            </div>
                         </div>
-                        <div class="hidden md:block flex-grow border-b border-dotted border-gray-400 mx-4 opacity-30"></div>
-                        <span class="text-xl font-serif mt-2 md:mt-0">$85</span>
+
+                        <div class="group fade-in-up flex flex-col md:flex-row justify-between items-end relative overflow-hidden pb-8">
+                            <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gray-800 group-hover:bg-gold transition-colors duration-700"></div>
+                            <div class="absolute bottom-0 left-0 w-0 h-[1px] bg-gold group-hover:w-full transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]"></div>
+
+                            <div class="w-full md:w-3/4">
+                                <h3 class="text-3xl font-serif mb-4 text-light group-hover:text-gold transition-colors duration-500">Kopi Luwak Reserve</h3>
+                                <p class="text-gray-400 font-light text-sm tracking-wide max-w-md">Extremely rare Indonesian beans, meticulously brewed table-side.</p>
+                            </div>
+                            <div class="w-full md:w-1/4 text-right mt-4 md:mt-0">
+                                <span class="text-2xl font-sans tracking-widest text-light group-hover:text-gold transition-colors duration-500">$85</span>
+                            </div>
+                        </div>
+
+                        <div class="group fade-in-up flex flex-col md:flex-row justify-between items-end relative overflow-hidden pb-8">
+                            <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gray-800 group-hover:bg-gold transition-colors duration-700"></div>
+                            <div class="absolute bottom-0 left-0 w-0 h-[1px] bg-gold group-hover:w-full transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]"></div>
+
+                            <div class="w-full md:w-3/4">
+                                <h3 class="text-3xl font-serif mb-4 text-light group-hover:text-gold transition-colors duration-500">Madagascar Vanilla Draft</h3>
+                                <p class="text-gray-400 font-light text-sm tracking-wide max-w-md">House-made vanilla bean syrup, micro-foamed organic milk, served on nitro.</p>
+                            </div>
+                            <div class="w-full md:w-1/4 text-right mt-4 md:mt-0">
+                                <span class="text-2xl font-sans tracking-widest text-light group-hover:text-gold transition-colors duration-500">$18</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-col md:flex-row justify-between items-baseline group reveal-stagger">
-                        <div class="flex-1">
-                            <h3 class="text-xl font-serif mb-1 group-hover:text-gold transition-colors">Madagascar Vanilla Latte</h3>
-                            <p class="text-gray-500 font-light text-sm italic">House-made vanilla bean syrup, micro-foamed organic milk.</p>
+                </div>
+
+                <!-- Category 2 -->
+                <div>
+                    <div class="border-b border-gold/30 pb-6 mb-16 fade-in-scroll">
+                        <h2 class="text-4xl md:text-5xl font-serif text-light uppercase tracking-tighter">Fine <span class="italic text-gold font-light lowercase">Pastries</span></h2>
+                    </div>
+                    <div class="space-y-16">
+                        <div class="group fade-in-up flex flex-col md:flex-row justify-between items-end relative overflow-hidden pb-8">
+                            <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gray-800 group-hover:bg-gold transition-colors duration-700"></div>
+                            <div class="absolute bottom-0 left-0 w-0 h-[1px] bg-gold group-hover:w-full transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]"></div>
+
+                            <div class="w-full md:w-3/4">
+                                <h3 class="text-3xl font-serif mb-4 text-light group-hover:text-gold transition-colors duration-500">Truffle Croissant</h3>
+                                <p class="text-gray-400 font-light text-sm tracking-wide max-w-md">Hand-rolled, infused with black winter truffle butter.</p>
+                            </div>
+                            <div class="w-full md:w-1/4 text-right mt-4 md:mt-0">
+                                <span class="text-2xl font-sans tracking-widest text-light group-hover:text-gold transition-colors duration-500">$35</span>
+                            </div>
                         </div>
-                        <div class="hidden md:block flex-grow border-b border-dotted border-gray-400 mx-4 opacity-30"></div>
-                        <span class="text-xl font-serif mt-2 md:mt-0">$18</span>
+
+                        <div class="group fade-in-up flex flex-col md:flex-row justify-between items-end relative overflow-hidden pb-8">
+                            <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gray-800 group-hover:bg-gold transition-colors duration-700"></div>
+                            <div class="absolute bottom-0 left-0 w-0 h-[1px] bg-gold group-hover:w-full transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]"></div>
+
+                            <div class="w-full md:w-3/4">
+                                <h3 class="text-3xl font-serif mb-4 text-light group-hover:text-gold transition-colors duration-500">Caviar Blini Bites</h3>
+                                <p class="text-gray-400 font-light text-sm tracking-wide max-w-md">Buckwheat blinis, crème fraîche, Imperial Beluga caviar.</p>
+                            </div>
+                            <div class="w-full md:w-1/4 text-right mt-4 md:mt-0">
+                                <span class="text-2xl font-sans tracking-widest text-light group-hover:text-gold transition-colors duration-500">$120</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Category 2 -->
-            <div class="menu-section">
-                <h2 class="text-3xl font-serif text-center mb-10 text-gold uppercase tracking-widest reveal-fade">Fine Pastries</h2>
-                <div class="space-y-8">
-                    <div class="flex flex-col md:flex-row justify-between items-baseline group reveal-stagger">
-                        <div class="flex-1">
-                            <h3 class="text-xl font-serif mb-1 group-hover:text-gold transition-colors">Truffle Croissant</h3>
-                            <p class="text-gray-500 font-light text-sm italic">Hand-rolled, infused with black winter truffle butter.</p>
-                        </div>
-                        <div class="hidden md:block flex-grow border-b border-dotted border-gray-400 mx-4 opacity-30"></div>
-                        <span class="text-xl font-serif mt-2 md:mt-0">$35</span>
-                    </div>
-                    <div class="flex flex-col md:flex-row justify-between items-baseline group reveal-stagger">
-                        <div class="flex-1">
-                            <h3 class="text-xl font-serif mb-1 group-hover:text-gold transition-colors">Caviar Blini Bites</h3>
-                            <p class="text-gray-500 font-light text-sm italic">Buckwheat blinis, crème fraîche, Beluga caviar.</p>
-                        </div>
-                        <div class="hidden md:block flex-grow border-b border-dotted border-gray-400 mx-4 opacity-30"></div>
-                        <span class="text-xl font-serif mt-2 md:mt-0">$120</span>
-                    </div>
-                    <div class="flex flex-col md:flex-row justify-between items-baseline group reveal-stagger">
-                        <div class="flex-1">
-                            <h3 class="text-xl font-serif mb-1 group-hover:text-gold transition-colors">Gold Leaf Opera Cake</h3>
-                            <p class="text-gray-500 font-light text-sm italic">Layers of almond sponge, coffee syrup, chocolate ganache.</p>
-                        </div>
-                        <div class="hidden md:block flex-grow border-b border-dotted border-gray-400 mx-4 opacity-30"></div>
-                        <span class="text-xl font-serif mt-2 md:mt-0">$45</span>
-                    </div>
-                </div>
-            </div>
-
         </section>
+
+
+            <!-- Footer -->
+            <footer class="bg-black py-24 px-6 md:px-16 text-light relative z-20 overflow-hidden">
+                <div class="max-w-[90vw] mx-auto border-t border-gray-800 pt-16 flex flex-col md:flex-row justify-between items-center gap-10">
+                    <div>
+                        <h2 class="text-4xl font-serif font-bold tracking-widest text-gold mb-2">CAFE BY TAMIR</h2>
+                        <p class="text-gray-500 text-xs tracking-widest uppercase">Est. 2024</p>
+                    </div>
+                    <div class="flex space-x-10 text-gray-400 text-[0.65rem] tracking-[0.2em] uppercase font-bold">
+                        <a href="#" class="hover:text-gold transition-colors relative group"><span class="relative z-10">Instagram</span><span class="absolute left-0 -bottom-1 w-0 h-[1px] bg-gold group-hover:w-full transition-all duration-300"></span></a>
+                        <a href="#" class="hover:text-gold transition-colors relative group"><span class="relative z-10">Twitter</span><span class="absolute left-0 -bottom-1 w-0 h-[1px] bg-gold group-hover:w-full transition-all duration-300"></span></a>
+                    </div>
+                    <p class="text-gray-600 text-[0.65rem] tracking-widest uppercase">&copy; 2024. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark py-16 px-6 text-center text-light">
-        <h2 class="text-3xl font-serif font-bold tracking-widest text-gold mb-6">CAFE BY TAMIR</h2>
-        <div class="flex justify-center space-x-6 mb-8 text-gray-500 text-sm tracking-widest uppercase">
-            <a href="#" class="hover:text-gold transition-colors">Instagram</a>
-            <a href="#" class="hover:text-gold transition-colors">Facebook</a>
-            <a href="#" class="hover:text-gold transition-colors">Twitter</a>
-        </div>
-        <p class="text-gray-600 text-xs tracking-wider">&copy; 2024 Cafe by Tamir. All rights reserved.</p>
-    </footer>
-
-    <!-- GSAP -->
+    <!-- Lenis & GSAP -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
