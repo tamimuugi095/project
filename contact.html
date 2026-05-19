@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Aura Cafe</title>
+    <title>Contact | Cafe by Tamir</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -36,10 +36,11 @@
     <!-- Navigation (Dark Version) -->
     <nav class="fixed w-full z-50 transition-all duration-300 py-4 bg-light/90 backdrop-blur-sm border-b border-gray-200" id="navbar">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest text-dark nav-logo">AURA</a>
+            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest text-dark nav-logo">CAFE BY TAMIR</a>
             <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
                 <a href="index.html" class="text-dark hover:text-gold transition-colors duration-300">Home</a>
                 <a href="menu.html" class="text-dark hover:text-gold transition-colors duration-300">Menu</a>
+                <a href="about.html" class="text-dark hover:text-gold transition-colors duration-300">About</a>
                 <a href="contact.html" class="text-gold transition-colors duration-300">Contact</a>
             </div>
             <!-- Mobile Menu Button -->
@@ -52,9 +53,15 @@
     <!-- Main Content -->
     <main class="pt-24 pb-24" id="main-content">
         <!-- Banner -->
-        <section class="py-20 px-6 text-center border-b border-gray-200">
-            <h1 class="text-5xl md:text-7xl font-serif mb-4 hero-title opacity-0">Reserve Your <span class="italic text-gold">Experience</span></h1>
-            <p class="text-gray-500 tracking-wide font-light max-w-2xl mx-auto hero-subtitle opacity-0">Reach out to secure your table or inquire about our exclusive private events.</p>
+        <section class="relative py-32 px-6 text-center border-b border-gray-200 overflow-hidden">
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover hero-vid scale-110">
+                <source src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Moccamaster_coffee_maker.webm" type="video/webm">
+            </video>
+            <div class="relative z-20">
+            <h1 class="text-5xl md:text-7xl font-serif mb-4 hero-title opacity-0 text-light">Reserve Your <span class="italic text-gold">Experience</span></h1>
+            <p class="text-gray-300 tracking-wide font-light max-w-2xl mx-auto hero-subtitle opacity-0">Reach out to secure your table or inquire about our exclusive private events.</p>
+        </div>
         </section>
 
         <!-- Contact Section -->
@@ -72,7 +79,7 @@
                 </div>
                 <div>
                     <h3 class="text-sm uppercase tracking-[0.2em] text-gold font-bold mb-4">Contact</h3>
-                    <p class="font-serif text-lg leading-relaxed">+1 (555) 123-4567<br>concierge@auracafe.com</p>
+                    <p class="font-serif text-lg leading-relaxed">+1 (555) 123-4567<br>concierge@cafebytamir.com</p>
                 </div>
             </div>
 
@@ -106,13 +113,13 @@
 
     <!-- Footer -->
     <footer class="bg-dark py-16 px-6 text-center text-light mt-20">
-        <h2 class="text-3xl font-serif font-bold tracking-widest text-gold mb-6">AURA</h2>
+        <h2 class="text-3xl font-serif font-bold tracking-widest text-gold mb-6">CAFE BY TAMIR</h2>
         <div class="flex justify-center space-x-6 mb-8 text-gray-500 text-sm tracking-widest uppercase">
             <a href="#" class="hover:text-gold transition-colors">Instagram</a>
             <a href="#" class="hover:text-gold transition-colors">Facebook</a>
             <a href="#" class="hover:text-gold transition-colors">Twitter</a>
         </div>
-        <p class="text-gray-600 text-xs tracking-wider">&copy; 2024 Aura Cafe. All rights reserved.</p>
+        <p class="text-gray-600 text-xs tracking-wider">&copy; 2024 Cafe by Tamir. All rights reserved.</p>
     </footer>
 
     <!-- GSAP -->

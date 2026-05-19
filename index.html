@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Cafe | Luxury Experience</title>
+    <title>Cafe by Tamir | Luxury Experience</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -36,10 +36,11 @@
     <!-- Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest text-gold nav-logo">AURA</a>
+            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest text-gold nav-logo">CAFE BY TAMIR</a>
             <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
                 <a href="index.html" class="hover:text-gold transition-colors duration-300">Home</a>
                 <a href="menu.html" class="hover:text-gold transition-colors duration-300">Menu</a>
+                <a href="about.html" class="hover:text-gold transition-colors duration-300">About</a>
                 <a href="contact.html" class="hover:text-gold transition-colors duration-300">Contact</a>
             </div>
             <!-- Mobile Menu Button -->
@@ -54,7 +55,9 @@
         <!-- Hero Section -->
         <section class="relative h-screen flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 bg-black/60 z-10"></div>
-            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop" alt="Luxury Cafe Interior" class="absolute inset-0 w-full h-full object-cover hero-img scale-110">
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover hero-vid scale-110">
+                <source src="https://upload.wikimedia.org/wikipedia/commons/2/2b/CafeAnimation.webm" type="video/webm">
+            </video>
             
             <div class="relative z-20 text-center px-4 max-w-4xl">
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif mb-6 leading-tight hero-title opacity-0">Taste The<br><span class="text-gold italic">Elegance</span></h1>
@@ -72,7 +75,7 @@
                 <div class="w-full md:w-1/2 space-y-6 reveal-text">
                     <h2 class="text-sm uppercase tracking-[0.3em] text-gold font-bold">Our Philosophy</h2>
                     <h3 class="text-4xl md:text-5xl font-serif leading-tight">Mastery in Every Cup</h3>
-                    <p class="text-gray-600 leading-relaxed font-light">At Aura, we believe that coffee is more than a beverage—it's an experience. Sourced from the world's most exclusive estates and roasted to perfection, every pour tells a story of dedication, passion, and unparalleled luxury.</p>
+                    <p class="text-gray-600 leading-relaxed font-light">At Cafe by Tamir, we believe that coffee is more than a beverage—it's an experience. Sourced from the world's most exclusive estates and roasted to perfection, every pour tells a story of dedication, passion, and unparalleled luxury.</p>
                     <a href="contact.html" class="inline-block border-b border-dark pb-1 uppercase tracking-widest text-sm hover:text-gold hover:border-gold transition-colors duration-300 mt-4">Visit Us</a>
                 </div>
             </div>
@@ -120,13 +123,13 @@
 
     <!-- Footer -->
     <footer class="bg-black py-16 px-6 text-center border-t border-gray-900">
-        <h2 class="text-3xl font-serif font-bold tracking-widest text-gold mb-6">AURA</h2>
+        <h2 class="text-3xl font-serif font-bold tracking-widest text-gold mb-6">CAFE BY TAMIR</h2>
         <div class="flex justify-center space-x-6 mb-8 text-gray-500 text-sm tracking-widest uppercase">
             <a href="#" class="hover:text-gold transition-colors">Instagram</a>
             <a href="#" class="hover:text-gold transition-colors">Facebook</a>
             <a href="#" class="hover:text-gold transition-colors">Twitter</a>
         </div>
-        <p class="text-gray-600 text-xs tracking-wider">&copy; 2024 Aura Cafe. All rights reserved.</p>
+        <p class="text-gray-600 text-xs tracking-wider">&copy; 2024 Cafe by Tamir. All rights reserved.</p>
     </footer>
 
     <!-- GSAP -->

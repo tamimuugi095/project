@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroTl = gsap.timeline();
     
     // Animate hero background image if present
-    const heroImg = document.querySelector('.hero-img');
-    if (heroImg) {
-        // Slow zoom effect
-        gsap.to(heroImg, {
+    const heroVid = document.querySelector('.hero-vid');
+    if (heroVid) {
+        // Slow zoom effect on video
+        gsap.to(heroVid, {
             scale: 1,
             duration: 10,
             ease: "power1.inOut"
