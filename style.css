@@ -1,33 +1,88 @@
-/* Custom CSS overrides and resets */
+/* Awwwards Style Premium CSS */
+
 body {
-    /* Hide scrollbar for cleaner look but keep functionality */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* Native smooth scroll behavior removed, handled by Lenis now */
+    cursor: default;
 }
 
 body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
+    display: none;
 }
 
-/* Base transitions */
 ::selection {
     background-color: #D4AF37;
-    color: #121212;
+    color: #0a0a0a;
 }
 
-/* Image reveal container setup for GSAP */
-.reveal-img-container {
-    visibility: hidden;
+/* Custom Cursor */
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
 }
 
-/* Smooth input fields for contact */
-input:not(:placeholder-shown) + label,
-textarea:not(:placeholder-shown) + label {
-    top: -1rem;
-    font-size: 0.75rem;
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #D4AF37;
 }
 
-/* Menu item hover effects */
-.menu-section {
-    position: relative;
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+/* Cursor interaction state */
+body.hovering .cursor-outline {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(212, 175, 55, 0.1);
+    border-color: transparent;
+    mix-blend-mode: difference;
+}
+body.hovering .cursor-dot {
+    opacity: 0;
+}
+
+/* Preloader Keyframes */
+@keyframes scrolldown {
+    0% { transform: translateY(-100%); }
+    50% { transform: translateY(0); }
+    100% { transform: translateY(100%); }
+}
+
+/* Form inputs */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #0a0a0a inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Lenis Recommended CSS */
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }

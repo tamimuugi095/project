@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Cafe by Tamir</title>
+    <title>About | Cafe by Tamir</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -69,12 +69,12 @@
             <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
                 <div class="absolute inset-0 bg-black/50 z-10"></div>
                 <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover hero-vid scale-110">
-                    <source src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Moccamaster_coffee_maker.webm" type="video/webm">
+                    <source src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Coffee_from_dan_2.webm" type="video/webm">
                 </video>
 
                 <div class="relative z-20 text-center px-4 mt-20 w-full">
 
-                <h1 class="text-[8vw] md:text-[6vw] font-serif mb-2 leading-[0.9] tracking-tighter uppercase font-bold text-light title-anim"><span class="block overflow-hidden"><span class="block translate-y-[110%]">Reserve</span></span><span class="block overflow-hidden"><span class="block translate-y-[110%] text-gold">A Table</span></span></h1>
+                <h1 class="text-[8vw] md:text-[6vw] font-serif mb-2 leading-[0.9] tracking-tighter uppercase font-bold text-light title-anim"><span class="block overflow-hidden"><span class="block translate-y-[110%]">Our</span></span><span class="block overflow-hidden"><span class="block translate-y-[110%] text-gold">Manifesto</span></span></h1>
 
                 </div>
 
@@ -88,43 +88,15 @@
 
 
         <section class="py-40 bg-dark text-light relative z-20">
-            <div class="max-w-[80vw] mx-auto px-6 flex flex-col lg:flex-row gap-24">
-                <div class="w-full lg:w-5/12 space-y-16 fade-in-scroll">
-                    <div>
-                        <h3 class="text-[0.65rem] uppercase tracking-[0.3em] text-gold font-bold mb-6">Location</h3>
-                        <p class="font-serif text-2xl leading-relaxed">The Penthouse Suite,<br>123 Luxury Avenue,<br>New York, NY 10001</p>
-                    </div>
-                    <div>
-                        <h3 class="text-[0.65rem] uppercase tracking-[0.3em] text-gold font-bold mb-6">Inquiries</h3>
-                        <a href="mailto:concierge@cafebytamir.com" class="font-serif text-2xl leading-relaxed hover:text-gold transition-colors inline-block relative after:content-[''] after:absolute after:w-full after:h-[1px] after:bg-gold after:bottom-0 after:left-0 after:scale-x-0 hover:after:scale-x-100 after:origin-right hover:after:origin-left after:transition-transform after:duration-500">concierge@cafebytamir.com</a>
-                        <p class="font-serif text-xl leading-relaxed text-gray-400 mt-2">+1 (555) 123-4567</p>
-                    </div>
+            <div class="max-w-[80vw] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+                <div class="space-y-12 pr-10 fade-in-scroll">
+                    <p class="text-xs uppercase tracking-[0.3em] text-gold font-bold">The Origin</p>
+                    <h2 class="text-4xl md:text-5xl font-serif leading-[1.2]"><span class="italic text-gray-400 font-light">Born from</span> an obsession with the uncompromising.</h2>
+                    <p class="text-gray-400 font-light text-lg leading-relaxed">Cafe by Tamir was not established to serve the masses. It was conceived in 2024 as a sanctuary for purists. We bypass commercial supply chains entirely, dealing directly with exclusive estates that produce less than 100 kilograms of coffee annually.</p>
+                    <p class="text-gray-400 font-light text-lg leading-relaxed">Every variable, from water minerality to extraction pressure, is controlled with surgical precision. This is not hospitality; this is an obsessive pursuit of perfection.</p>
                 </div>
-
-                <div class="w-full lg:w-7/12 fade-in-scroll">
-                    <form class="space-y-12">
-                        <div class="relative pt-4 group">
-                            <input type="text" id="name" class="w-full bg-transparent border-b border-gray-800 py-6 text-xl focus:outline-none focus:border-gold transition-colors peer placeholder-transparent" placeholder="Name">
-                            <label for="name" class="absolute left-0 top-10 text-gray-600 font-serif text-xl transition-all duration-500 peer-focus:top-0 peer-focus:text-xs peer-focus:text-gold peer-focus:font-sans peer-focus:uppercase peer-focus:tracking-widest peer-valid:top-0 peer-valid:text-xs peer-valid:font-sans peer-valid:uppercase peer-valid:tracking-widest">Name</label>
-                            <div class="absolute bottom-0 left-0 w-0 h-[1px] bg-gold group-focus-within:w-full transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]"></div>
-                        </div>
-                        <div class="relative pt-4 group">
-                            <input type="email" id="email" class="w-full bg-transparent border-b border-gray-800 py-6 text-xl focus:outline-none focus:border-gold transition-colors peer placeholder-transparent" placeholder="Email">
-                            <label for="email" class="absolute left-0 top-10 text-gray-600 font-serif text-xl transition-all duration-500 peer-focus:top-0 peer-focus:text-xs peer-focus:text-gold peer-focus:font-sans peer-focus:uppercase peer-focus:tracking-widest peer-valid:top-0 peer-valid:text-xs peer-valid:font-sans peer-valid:uppercase peer-valid:tracking-widest">Email Address</label>
-                            <div class="absolute bottom-0 left-0 w-0 h-[1px] bg-gold group-focus-within:w-full transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]"></div>
-                        </div>
-                        <div class="relative pt-4 group">
-                            <input type="text" id="date" class="w-full bg-transparent border-b border-gray-800 py-6 text-xl focus:outline-none focus:border-gold transition-colors peer placeholder-transparent" placeholder="Date">
-                            <label for="date" class="absolute left-0 top-10 text-gray-600 font-serif text-xl transition-all duration-500 peer-focus:top-0 peer-focus:text-xs peer-focus:text-gold peer-focus:font-sans peer-focus:uppercase peer-focus:tracking-widest peer-valid:top-0 peer-valid:text-xs peer-valid:font-sans peer-valid:uppercase peer-valid:tracking-widest">Requested Date / Party Size</label>
-                            <div class="absolute bottom-0 left-0 w-0 h-[1px] bg-gold group-focus-within:w-full transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]"></div>
-                        </div>
-                        <div class="pt-8 text-right">
-                            <button type="button" class="inline-block border border-gold/30 text-gold px-16 py-6 uppercase tracking-[0.2em] text-xs hover:bg-gold hover:text-dark hover:border-gold transition-all duration-500 relative group overflow-hidden cursor-none">
-                                <span class="relative z-10">Submit Inquiry</span>
-                                <div class="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] z-0"></div>
-                            </button>
-                        </div>
-                    </form>
+                <div class="relative h-[100vh] w-full overflow-hidden parallax-container">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1974&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover parallax-img scale-125 grayscale" alt="Interior">
                 </div>
             </div>
         </section>

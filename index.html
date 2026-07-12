@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="bg-black">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Cafe | Luxury Experience</title>
+    <title>Cafe by Tamir | Luxury Experience</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     
@@ -19,117 +19,169 @@
                 extend: {
                     colors: {
                         gold: '#D4AF37',
-                        dark: '#121212',
-                        light: '#F8F5F0',
-                        cream: '#E8DCC4'
+                        dark: '#0a0a0a',
+                        light: '#ffffff'
                     },
                     fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-dark text-light font-sans antialiased selection:bg-gold selection:text-dark">
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-serif font-bold tracking-widest text-gold nav-logo">AURA</a>
-            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
-                <a href="index.html" class="hover:text-gold transition-colors duration-300">Home</a>
-                <a href="menu.html" class="hover:text-gold transition-colors duration-300">Menu</a>
-                <a href="contact.html" class="hover:text-gold transition-colors duration-300">Contact</a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-gold focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
+<body class="bg-dark text-light font-sans antialiased selection:bg-gold selection:text-dark overflow-x-hidden">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+
+    <!-- Preloader -->
+    <div class="preloader fixed inset-0 z-[100] bg-dark flex flex-col justify-center items-center">
+        <div class="overflow-hidden mb-4">
+            <h1 class="text-4xl md:text-6xl font-serif text-gold tracking-widest uppercase translate-y-full preloader-text">CAFE BY TAMIR</h1>
         </div>
+        <div class="w-64 h-[1px] bg-gray-800 relative overflow-hidden">
+            <div class="absolute top-0 left-0 h-full bg-gold w-0 preloader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 mix-blend-difference py-8 px-8 md:px-16 flex justify-between items-center opacity-0 nav-anim pointer-events-none">
+        <a href="index.html" class="text-2xl font-serif font-bold tracking-widest text-light nav-logo pointer-events-auto">CB<span class="text-gold">T</span></a>
+        <div class="hidden md:flex space-x-12 text-[0.65rem] uppercase tracking-[0.3em] font-bold">
+            <a href="index.html" class="text-light hover:text-gold transition-colors duration-300 pointer-events-auto relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300">Home</a>
+            <a href="menu.html" class="text-light hover:text-gold transition-colors duration-300 pointer-events-auto relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300">Menu</a>
+            <a href="about.html" class="text-light hover:text-gold transition-colors duration-300 pointer-events-auto relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300">About</a>
+            <a href="contact.html" class="text-light hover:text-gold transition-colors duration-300 pointer-events-auto relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300">Contact</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-light focus:outline-none pointer-events-auto">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
     </nav>
 
     <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="relative h-screen flex items-center justify-center overflow-hidden">
-            <div class="absolute inset-0 bg-black/60 z-10"></div>
-            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop" alt="Luxury Cafe Interior" class="absolute inset-0 w-full h-full object-cover hero-img scale-110">
-            
-            <div class="relative z-20 text-center px-4 max-w-4xl">
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif mb-6 leading-tight hero-title opacity-0">Taste The<br><span class="text-gold italic">Elegance</span></h1>
-                <p class="text-lg md:text-xl font-light tracking-wide mb-10 hero-subtitle opacity-0">An exclusive sanctuary for coffee connoisseurs and culinary enthusiasts.</p>
-                <a href="menu.html" class="inline-block border border-gold text-gold px-10 py-4 uppercase tracking-widest text-sm hover:bg-gold hover:text-dark transition-all duration-300 hero-btn opacity-0">Explore Menu</a>
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- Hero Section -->
+            <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+                <div class="absolute inset-0 bg-black/50 z-10"></div>
+                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover hero-vid scale-110">
+                    <source src="https://upload.wikimedia.org/wikipedia/commons/2/2b/CafeAnimation.webm" type="video/webm">
+                </video>
+
+                <div class="relative z-20 text-center px-4 mt-20 w-full">
+
+                <h1 class="text-[12vw] md:text-[10vw] font-serif mb-2 leading-[0.8] tracking-tighter uppercase font-bold text-light title-anim"><span class="block overflow-hidden"><span class="block translate-y-[110%]">CAFE</span></span><span class="block overflow-hidden"><span class="block translate-y-[110%] text-gold">BY TAMIR</span></span></h1>
+                <p class="text-sm md:text-lg font-sans tracking-[0.2em] uppercase mb-12 opacity-0 fade-anim text-gray-300">The Apex of Culinary Elegance</p>
+                <div class="overflow-hidden inline-block"><a href="menu.html" class="inline-block border border-gold/30 text-gold px-12 py-5 uppercase tracking-[0.2em] text-xs hover:bg-gold hover:text-dark hover:border-gold transition-all duration-500 opacity-0 fade-anim relative group overflow-hidden"><span class="relative z-10">Discover Mastery</span><div class="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] z-0"></div></a></div>
+
+                </div>
+
+                <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-light opacity-0 fade-anim flex flex-col items-center">
+                    <span class="text-[0.55rem] uppercase tracking-[0.3em] mb-4">Scroll</span>
+                    <div class="w-[1px] h-12 bg-gray-600 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gold -translate-y-full animate-[scrolldown_2s_infinite_ease-in-out]"></div>
+                    </div>
+                </div>
+            </section>
+
+
+        <section class="py-32 px-6 bg-dark text-light relative z-20">
+            <div class="max-w-[90vw] mx-auto flex flex-col md:flex-row gap-20">
+                <div class="w-full md:w-5/12 flex items-center">
+                    <div class="space-y-8 pl-4 border-l border-gold/20">
+                        <p class="text-xs uppercase tracking-[0.3em] text-gold font-bold fade-in-scroll">01 / Philosophy</p>
+                        <h2 class="text-4xl md:text-6xl font-serif leading-[1.1] fade-in-scroll">A Symphony of <br><span class="italic text-gray-400 font-light">Sensory</span> Perfection.</h2>
+                        <p class="text-gray-400 font-light text-lg leading-relaxed fade-in-scroll max-w-md">We do not serve coffee; we orchestrate an experience. Sourced from the top 0.1% of global micro-lots, our beans are treated with an almost religious reverence.</p>
+                        <div class="pt-8 fade-in-scroll">
+                            <a href="about.html" class="uppercase text-xs tracking-[0.2em] border-b border-gray-600 pb-2 hover:text-gold hover:border-gold transition-colors duration-500">Read the Manifesto</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-7/12 relative h-[80vh] overflow-hidden group parallax-container">
+                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1975&auto=format&fit=crop" alt="Pouring Coffee" class="absolute inset-0 w-full h-full object-cover parallax-img scale-110 grayscale group-hover:grayscale-0 transition-all duration-1000">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-1000"></div>
+                </div>
             </div>
         </section>
 
-        <!-- About Snippet -->
-        <section class="py-24 px-6 bg-light text-dark">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-                <div class="w-full md:w-1/2 overflow-hidden reveal-img-container">
-                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1975&auto=format&fit=crop" alt="Pouring Coffee" class="w-full h-auto object-cover rounded-sm reveal-img">
+        <section class="py-40 bg-black text-light relative z-20 overflow-hidden">
+            <div class="absolute top-0 right-0 text-[15vw] font-serif text-white/[0.02] leading-none select-none pointer-events-none -translate-y-1/2 uppercase tracking-tighter">Signatures</div>
+            <div class="max-w-[90vw] mx-auto px-6">
+                <div class="flex justify-between items-end mb-24 fade-in-scroll">
+                    <h2 class="text-5xl md:text-7xl font-serif leading-none tracking-tighter uppercase"><span class="italic text-gold font-light lowercase">the</span> Collection</h2>
+                    <a href="menu.html" class="hidden md:inline-block uppercase text-xs tracking-[0.2em] border-b border-gray-600 pb-2 hover:text-gold hover:border-gold transition-colors duration-500">View All</a>
                 </div>
-                <div class="w-full md:w-1/2 space-y-6 reveal-text">
-                    <h2 class="text-sm uppercase tracking-[0.3em] text-gold font-bold">Our Philosophy</h2>
-                    <h3 class="text-4xl md:text-5xl font-serif leading-tight">Mastery in Every Cup</h3>
-                    <p class="text-gray-600 leading-relaxed font-light">At Aura, we believe that coffee is more than a beverage—it's an experience. Sourced from the world's most exclusive estates and roasted to perfection, every pour tells a story of dedication, passion, and unparalleled luxury.</p>
-                    <a href="contact.html" class="inline-block border-b border-dark pb-1 uppercase tracking-widest text-sm hover:text-gold hover:border-gold transition-colors duration-300 mt-4">Visit Us</a>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="group cursor-none fade-in-up">
+                        <div class="relative h-[60vh] overflow-hidden mb-8">
+                            <img src="https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?q=80&w=1974&auto=format&fit=crop" alt="Espresso" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[1.5s] ease-[cubic-bezier(0.19,1,0.22,1)] grayscale group-hover:grayscale-0">
+                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-colors duration-1000"></div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-[0.65rem] uppercase tracking-[0.2em] text-gold mb-2 font-bold">01</p>
+                                <h3 class="text-2xl font-serif">Aurum Espresso</h3>
+                            </div>
+                            <span class="text-sm font-sans tracking-widest text-gray-500 group-hover:text-gold transition-colors duration-500">$25</span>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-none fade-in-up" style="transition-delay: 100ms;">
+                        <div class="relative h-[60vh] overflow-hidden mb-8 md:mt-24">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1974&auto=format&fit=crop" alt="Pastry" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[1.5s] ease-[cubic-bezier(0.19,1,0.22,1)] grayscale group-hover:grayscale-0">
+                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-colors duration-1000"></div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-[0.65rem] uppercase tracking-[0.2em] text-gold mb-2 font-bold">02</p>
+                                <h3 class="text-2xl font-serif">Truffle Croissant</h3>
+                            </div>
+                            <span class="text-sm font-sans tracking-widest text-gray-500 group-hover:text-gold transition-colors duration-500">$35</span>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-none fade-in-up" style="transition-delay: 200ms;">
+                        <div class="relative h-[60vh] overflow-hidden mb-8 md:mt-48">
+                            <img src="https://images.unsplash.com/photo-1558401391-7899b4bd5bbf?q=80&w=1974&auto=format&fit=crop" alt="Matcha" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[1.5s] ease-[cubic-bezier(0.19,1,0.22,1)] grayscale group-hover:grayscale-0">
+                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-colors duration-1000"></div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-[0.65rem] uppercase tracking-[0.2em] text-gold mb-2 font-bold">03</p>
+                                <h3 class="text-2xl font-serif">Imperial Matcha</h3>
+                            </div>
+                            <span class="text-sm font-sans tracking-widest text-gray-500 group-hover:text-gold transition-colors duration-500">$45</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Featured Section -->
-        <section class="py-24 px-6 bg-dark">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16 reveal-fade">
-                    <h2 class="text-sm uppercase tracking-[0.3em] text-gold font-bold mb-4">Signatures</h2>
-                    <h3 class="text-4xl md:text-5xl font-serif">A Glimpse of Perfection</h3>
+
+            <!-- Footer -->
+            <footer class="bg-black py-24 px-6 md:px-16 text-light relative z-20 overflow-hidden">
+                <div class="max-w-[90vw] mx-auto border-t border-gray-800 pt-16 flex flex-col md:flex-row justify-between items-center gap-10">
+                    <div>
+                        <h2 class="text-4xl font-serif font-bold tracking-widest text-gold mb-2">CAFE BY TAMIR</h2>
+                        <p class="text-gray-500 text-xs tracking-widest uppercase">Est. 2024</p>
+                    </div>
+                    <div class="flex space-x-10 text-gray-400 text-[0.65rem] tracking-[0.2em] uppercase font-bold">
+                        <a href="#" class="hover:text-gold transition-colors relative group"><span class="relative z-10">Instagram</span><span class="absolute left-0 -bottom-1 w-0 h-[1px] bg-gold group-hover:w-full transition-all duration-300"></span></a>
+                        <a href="#" class="hover:text-gold transition-colors relative group"><span class="relative z-10">Twitter</span><span class="absolute left-0 -bottom-1 w-0 h-[1px] bg-gold group-hover:w-full transition-all duration-300"></span></a>
+                    </div>
+                    <p class="text-gray-600 text-[0.65rem] tracking-widest uppercase">&copy; 2024. All rights reserved.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Item 1 -->
-                    <div class="group cursor-pointer reveal-stagger">
-                        <div class="overflow-hidden mb-4 relative">
-                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?q=80&w=1974&auto=format&fit=crop" alt="Espresso" class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700">
-                        </div>
-                        <h4 class="text-xl font-serif mb-2 text-gold">The Golden Espresso</h4>
-                        <p class="text-gray-400 font-light text-sm">24k edible gold flakes, single-origin Ethiopian beans.</p>
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="group cursor-pointer reveal-stagger">
-                        <div class="overflow-hidden mb-4 relative">
-                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1974&auto=format&fit=crop" alt="Pastry" class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700">
-                        </div>
-                        <h4 class="text-xl font-serif mb-2 text-gold">Truffle Croissant</h4>
-                        <p class="text-gray-400 font-light text-sm">Hand-rolled, infused with black winter truffle butter.</p>
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="group cursor-pointer reveal-stagger">
-                        <div class="overflow-hidden mb-4 relative">
-                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1558401391-7899b4bd5bbf?q=80&w=1974&auto=format&fit=crop" alt="Matcha" class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700">
-                        </div>
-                        <h4 class="text-xl font-serif mb-2 text-gold">Ceremonial Matcha</h4>
-                        <p class="text-gray-400 font-light text-sm">Uji matcha, whisked table-side to perfection.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </footer>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-black py-16 px-6 text-center border-t border-gray-900">
-        <h2 class="text-3xl font-serif font-bold tracking-widest text-gold mb-6">AURA</h2>
-        <div class="flex justify-center space-x-6 mb-8 text-gray-500 text-sm tracking-widest uppercase">
-            <a href="#" class="hover:text-gold transition-colors">Instagram</a>
-            <a href="#" class="hover:text-gold transition-colors">Facebook</a>
-            <a href="#" class="hover:text-gold transition-colors">Twitter</a>
-        </div>
-        <p class="text-gray-600 text-xs tracking-wider">&copy; 2024 Aura Cafe. All rights reserved.</p>
-    </footer>
-
-    <!-- GSAP -->
+    <!-- Lenis & GSAP -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
